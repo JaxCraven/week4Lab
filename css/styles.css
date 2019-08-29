@@ -1,0 +1,44 @@
+body{
+    background-color: black;
+    text-align: center;
+}
+
+h1,h2,h3{
+    color: whitesmoke;
+    text-align: center;
+}
+
+table.center{
+    color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+table,th,td,tr{
+    border: 1px solid whitesmoke;
+    border-collapse: collapse;
+}
+
+div{
+    color: whitesmoke;
+    text-align: center;
+}
+
+#link{
+    padding-right: 10px;
+}
+
+a{
+    color: whitesmoke;
+    font-size: 50px;
+}
+
+#taskName, #taskDue, #taskDesc{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+form{
+    color: whitesmoke;
+    text-align: center;
+}

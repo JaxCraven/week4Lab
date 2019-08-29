@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Your tasks:</h1>
+        <%if(taskDb.length > 0){ %>
+            <table class="center">
+                <tr>
+                    <th>Task Name:</th>
+                    <th>Task Due:</th>
+                    <th>Task Description:</th>
+                </tr>
+                <%for(var i = 0; i < taskDb.length; i++){ %>
+                    <tr>
+                        <td>
+                            <%= taskDb[i].name %>
+                        </td>
+                        <td>
+                            <%= taskDb[i].due %>
+                        </td>
+                        <td>
+                            <%= taskDb[i].desc %>
+                        </td>
+                    </tr>
+                <%}%>
+            </table>
+        <%} else {%>
+            <h3>You currently have no tasks.</h3>
+        <%}%>
+        <br>
+        <div>
+            <a href="/" id="link">Home</a>
+            <a href="/newTask.html">New Task</a>  
+        </div> 
+    </body>
+</html>
