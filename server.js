@@ -25,13 +25,19 @@ app.get('/', function(req,res){
 });
 
 app.post('/data', function(req,res){
-    var task = {
-        name: req.body.taskName,
-        due: req.body.taskDue,
-        desc: req.body.taskDesc
-    };
-    db.push(task);
-    res.render('taskAdded.html',{taskName:req.body.taskName});
+    if(req.body.taskName != ""){
+        var task = {
+            name: req.body.taskName,
+            due: req.body.taskDue,
+            desc: req.body.taskDesc
+        };
+        let msg = "Task: " + req.body.taskName + ", Was successfully Added!!!";
+        db.push(task);
+        res.render('taskAdded.html',{taskMsg:msg});    
+    } else {
+        let msg = "Nice try!!!!";
+        res.render('taskAdded.html', {taskMsg:msg});
+    }
 });
 
 app.get('/newTask.html', function(req,res){
