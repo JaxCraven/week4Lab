@@ -40,7 +40,7 @@ app.post('/data', function(req,res){
     }
 });
 
-app.get('/newTask.html', function(req,res){
+app.get('/newTask', function(req,res){
     res.sendFile(path.join(__dirname,"newTask.html"));
 });
 
